@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Row from 'ui/RowWithHeader'
+import DropdownSelect from 'ui/DropdownSelect'
 
 const FormPage = () => {
     return (
@@ -8,7 +9,9 @@ const FormPage = () => {
             FormPage
             <Row {...{
                 header: 'test',
-                rowComponent: 'rowComponent'
+                rowComponent: <DropdownSelect {...{
+                    options: ['1', '2', '4']
+                }} />
             }} />
         </div>
     )

@@ -6,7 +6,7 @@ const DropdownSelect = ({ value, options, onChangeSelect }) => {
         <div className="select  is-rounded">
             <select
                 value={value}
-                onChange={e => onChangeSelect(e.target.value)}
+                onChange={e => onChangeSelect(e.currentTarget.value)}
             >
                 <option>Select dropdown</option>
                 {options && options.map(option => <option key={option}>{option}</option>)}
