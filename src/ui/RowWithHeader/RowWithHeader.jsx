@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 const RowWithHeader = ({ header, rowComponent }) => {
     return (
-        <div class="columns">
-            <div class="column is-one-quarter">
+        <div className="columns">
+            <div className="column is-one-quarter">
                 <h2 className="subtitle is-2"> {header} </h2>
             </div>
-            <div class="column">
+            <div className="column">
                 {rowComponent}
             </div>
         </div>
