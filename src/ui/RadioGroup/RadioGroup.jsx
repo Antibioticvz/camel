@@ -5,9 +5,9 @@ const RadioGroup = ({ value, options, onChangeRadio }) => {
     const onChange = e => onChangeRadio(e.currentTarget.name)
 
     return (
-        <div class="control">
+        <div className="control">
             {options && options.map(option => (
-                <label class="radio" key={option}>
+                <label className="radio" key={option}>
                     <input
                         type="radio"
                         name={option}
