@@ -6,6 +6,8 @@ import Header from 'components/Header'
 import Form from 'screens/FormPage'
 import Result from 'screens/ResultPage'
 
+import './styles.scss'
+
 const App = () => {
   useEffect(() => {
     const script = document.createElement('script')
