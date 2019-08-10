@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 
 import Header from 'components/Header'
 import Form from 'screens/FormPage'
@@ -18,14 +18,15 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <>
         <Header />
-        <Link to='/'>Form</Link>
-        <br />
-        <Link to='result'>Result</Link>
-        <Route exact path="/" component={Form} />
-        <Route path="/result" component={Result} />
-      </div>
+
+        <div className="container is-fluid">
+          <Route exact path="/" component={Form} />
+          <Route path="/result" component={Result} />
+        </div>
+
+      </>
     </Router >
   );
 }
