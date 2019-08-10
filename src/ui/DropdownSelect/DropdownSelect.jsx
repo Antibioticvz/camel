@@ -5,7 +5,7 @@ const DropdownSelect = ({ value, options, onChangeSelect }) => {
     return (
         <div className="select  is-rounded">
             <select
-                value={value || options[0]}
+                value={value}
                 onChange={e => onChangeSelect(e.target.value)}
             >
                 <option>Select dropdown</option>
