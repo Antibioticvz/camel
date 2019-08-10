@@ -9,4 +9,5 @@ $purple: #8a4d76;
 // Update some of Bulma's component variables
 $body-background-color: $purple;
 
-@import "../node_modules/bulma/bulma.sass"
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-slider/src/sass/index.sass";
