@@ -2,18 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const RadioGroup = ({ value, options, onChangeRadio }) => {
-    const onChange = e => console.log(e.currentTarget.value)
+    const onChange = e => onChangeRadio(e.currentTarget.name)
 
     return (
         <div class="control">
-            {}
-            <label class="radio">
-                <input type="radio" name="foobar" />
-                Foo
-            </label>
-            {options && options.map((option, i) => (
+            {options && options.map(option => (
                 <label class="radio" key={option}>
-                    <input type="radio" name="foobar" checked />
+                    <input
+                        type="radio"
+                        name={option}
+                        checked={option === value}
+                        onChange={e => onChange(e)}
+                    />
                     {option}
                 </label>
             ))}
