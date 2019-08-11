@@ -18,7 +18,7 @@ export const BEARD_TYPE = {
 }
 
 export const BODY_TYPE = {
-    FAT: 'fat',
+    COOL: 'cool',
     SLIM: 'slim',
-    COOL: 'cool'
+    FAT: 'fat',
 }
