@@ -1,0 +1,6 @@
+export const SET_AGE = 'SET_AGE'
+export const SET_HEIGHT = 'SET_HEIGHT'
+export const SET_HAIRCOLOR = 'SET_HAIRCOLOR'
+export const SET_EYECOLOR = 'SET_EYECOLOR'
+export const SET_BEARD = 'SET_BEARD'
+export const SET_BODY = 'SET_BODY'
