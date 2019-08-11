@@ -1,17 +1,16 @@
-import React, { useReducer } from 'react'
+import React, { useContext } from 'react'
 import { Link } from "react-router-dom"
 
-import * as ACTIONS from 'reducer/actions'
-import initialFormValues from 'reducer/initialFormValues'
-import formReducer from 'reducer/formReducer'
 import { HAIR_TYPE, EYE_TYPE, BEARD_TYPE, BODY_TYPE } from 'constants/form'
+import { ReducerContext } from 'reducer/context'
+import * as ACTIONS from 'reducer/actions'
 import Row from 'ui/RowWithHeader'
 import DropdownSelect from 'ui/DropdownSelect'
 import RadioGroup from 'ui/RadioGroup'
 import Slider from 'ui/Slider'
 
 const FormPage = () => {
-    const [formValue, dispatch] = useReducer(formReducer, initialFormValues)
+    const { formValue, dispatch } = useContext(ReducerContext)
     return (
         <>
             <Row {...{

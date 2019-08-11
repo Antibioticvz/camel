@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import App from 'App'
+import { ReducerProvider } from 'reducer/context';
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<ReducerProvider><App /></ReducerProvider>, document.getElementById('root'))
 
