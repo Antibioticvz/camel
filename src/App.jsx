@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import React, { useEffect, useState } from 'react'
 
+import ROUT from 'constants/rout'
 import Header from 'components/Header'
 import Form from 'screens/FormPage'
 import Result from 'screens/ResultPage'
@@ -16,18 +16,21 @@ const App = () => {
     script.onload = () => window.FBInstant.initializeAsync().then(() => window.FBInstant.startGameAsync().then())
   }, [])
 
+  const [rout, setRoute] = useState(ROUT.FORM)
+
+  const COMPONENT = {
+    FORM: <Form {...{
+      checkResult: () => setRoute(ROUT.RESULT)
+    }} />,
+    RESULT: <Result />,
+  }
   return (
-    <Router>
-      <>
-        <Header />
-
-        <div className="container is-fluid">
-          <Route exact path="/" component={Form} />
-          <Route path="/result" component={Result} />
-        </div>
-
-      </>
-    </Router >
+    <>
+      <Header />
+      <div className="container is-fluid">
+        {COMPONENT[rout]}
+      </div>
+    </>
   );
 }
 

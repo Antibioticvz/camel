@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { Link } from "react-router-dom"
 
 import { HAIR_TYPE, EYE_TYPE, BEARD_TYPE, BODY_TYPE } from 'constants/form'
 import { ReducerContext } from 'reducer/context'
@@ -9,7 +8,7 @@ import DropdownSelect from 'ui/DropdownSelect'
 import RadioGroup from 'ui/RadioGroup'
 import Slider from 'ui/Slider'
 
-const FormPage = () => {
+const FormPage = ({ checkResult }) => {
     const { formValue, dispatch } = useContext(ReducerContext)
     return (
         <>
@@ -71,7 +70,7 @@ const FormPage = () => {
                 }} />
             }} />
 
-            <Link to='result' className="button is-link">Result</Link>
+            <button className="button is-link" onClick={() => checkResult()} >Result</button>
         </>
     )
 }
