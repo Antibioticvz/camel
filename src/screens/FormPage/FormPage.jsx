@@ -12,10 +12,8 @@ import Slider from 'ui/Slider'
 
 const FormPage = () => {
     const [formValue, dispatch] = useReducer(formReducer, initialFormValues)
-
     return (
         <>
-            {formValue.cost}
             <Row {...{
                 header: 'Age',
                 rowComponent: <Slider {...{
