@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const RadioGroup = ({ value, options, onChangeRadio }) => {
-    const onChange = e => onChangeRadio(e.currentTarget.name)
-
     return (
         <div className="control">
             {options && options.map(option => (
@@ -12,12 +10,11 @@ const RadioGroup = ({ value, options, onChangeRadio }) => {
                         type="radio"
                         name={option}
                         checked={option === value}
-                        onChange={e => onChange(e)}
+                        onChange={e => onChangeRadio(e)}
                     />
                     {option}
                 </label>
             ))}
-
         </div>
     )
 }
