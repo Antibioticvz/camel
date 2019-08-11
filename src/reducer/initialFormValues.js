@@ -7,6 +7,7 @@ export const initialFormValues = {
     eyecolor: EYE_TYPE.GRAY,
     beard: BEARD_TYPE.NO,
     body: BODY_TYPE.COOL,
+    cost: 100,
 }
 
 export default initialFormValues
