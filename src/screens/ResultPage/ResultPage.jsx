@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ReducerContext } from 'reducer/context'
 
 const ResultPage = () => {
+    const { formValue } = useContext(ReducerContext)
     return (
-        <div>
-            ResultPage
-        </div>
+        <>
+            <h1 className="title is-1">{`Your boyfriend is worth ${formValue && formValue.cost} camels`}</h1>
+        </>
     )
 }
 
